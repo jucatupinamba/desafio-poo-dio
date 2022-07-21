@@ -25,7 +25,7 @@ public class Dev {
         }
     }
     public double calcularTotalXp(){
-        return this.conteudosConcluidos.stream().mapToDouble(conteudo -> conteudo.hashCode()).sum();
+        return this.conteudosConcluidos.stream().mapToDouble(Object::hashCode).sum();
     }
 
     public String getNome() {
